@@ -1,4 +1,4 @@
-# Pandoc reveal.js slidehow template
+# Pandoc reveal.js slideshow template
 
 This is a ready-to-go file compilation to create a [reveal.js](https://revealjs.com/) presentation using [Pandoc](https://pandoc.org/).
 
@@ -18,6 +18,6 @@ This is a ready-to-go file compilation to create a [reveal.js](https://revealjs.
 
 6. Optional: Adapt `deploy_slides.sh` to your needs and run it to deploy your slideshow to e.g. [GitLab Pages](https://about.gitlab.com/product/pages/).
 
-## Automatically build the slidehow
+## Automatically build the slideshow
 
 If you're an [Atom](https://atom.io/) user, it's recommended to install the package [save-autorun](https://atom.io/packages/save-autorun). Then, everytime you save `slides.md`, `build_slides.sh` will be executed in the background to build `index.html`. This, obviously, can save you a lot of time while writing your slideshow.
