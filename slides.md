@@ -1,6 +1,6 @@
 ---
 title: SLIDESHOW
-lang: de-CH
+lang: en-US # change e.g. to 'de-CH' for German (Switzerland)
 ---
 
 ::: notes
