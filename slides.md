@@ -11,13 +11,13 @@ notes before the first slide...
 
 # 1st main slide {data-transition="convex"}
 
-## <span class="inverted">inverted slide 1</span> {data-background-color=white}
+## <span class="inverted">1st sub-slide (inverted)</span> {data-background-color=white}
 
-## <span class="inverted">inverted slide 2</span> {data-background-color=white}
+## <span class="inverted">2nd sub-slide (inverted)</span> {data-background-color=white}
 
 ---
 
-## 1st sub-slide
+## 3rd sub-slide
 
 - list items
 - items...
@@ -29,7 +29,7 @@ more notes...
 
 :::
 
-## 2nd sub-slide
+## 4th sub-slide
 
 - a list item
 
