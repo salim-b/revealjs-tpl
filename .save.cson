@@ -1,0 +1,2 @@
+"**/*.md": "./build_slides.sh"
+"**/*.css": "./build_slides.sh"

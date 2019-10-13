@@ -1,0 +1,9 @@
+# system-specific temp, backup, thumbnail etc. files
+.~lock*
+*.backup
+~$*
+.DS_Store
+Thumbs.db
+
+# compiled slideshow
+index.html
