@@ -5,7 +5,7 @@ css: assets/custom.css # put your custom styles in this file
 
 # title slide options
 title: SLIDESHOW
-title-slide-attributes:
+title-slide-attributes: # for further title slide attributes, see https://pandoc.org/MANUAL.html#background-in-reveal.js-and-beamer
     data-background-image: assets/unsplash-lERuUa_96uo.jpg
     data-background-size: cover # can alternatively be `contain` for letterboxing
 
