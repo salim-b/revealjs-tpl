@@ -1,6 +1,23 @@
 ---
-title: SLIDESHOW
+# general Pandoc options
 lang: en-US # change e.g. to 'de-CH' for German (Switzerland)
+css: assets/custom.css # put your custom styles in this file
+
+# title slide options
+title: SLIDESHOW
+title-slide-attributes:
+    data-background-image: assets/unsplash-lERuUa_96uo.jpg
+    data-background-size: cover # can alternatively be `contain` for letterboxing
+
+# Pandoc options for reveal.js
+revealjs-url: assets/reveal.js-3.8.0
+theme: black # for possible values see https://github.com/hakimel/reveal.js#theming
+#background-image: assets/unsplash-lERuUa_96uo.jpg # uncomment for the same background image on every slide
+
+# reveal.js config; for more options like `parallaxBackgroundImage`, see https://github.com/hakimel/reveal.js#configuration
+mouseWheel: false # set to `true` to scroll through the slides using the mouse wheel / touchpad
+width: 1920 # native presentation size, cf. https://github.com/hakimel/reveal.js#presentation-size
+height: 1080
 ---
 
 ::: notes
@@ -81,12 +98,12 @@ You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_d
 
 ::: {.inverted style="text-shadow: 1px 1px 2px red;"}
 
-::: nonincremental
+:::::: nonincremental
 
 - A non-incremental inverted list...
 - ...
 
-:::
+::::::
 
 ... followed by an inverted paragraph...
 
@@ -131,7 +148,7 @@ Babam!
 
 # 3rd main slide
 
-# Thanks! {data-background-image=assets/photo-1473625247510-8ceb1760943f.jpg}
+# Thanks! {data-background-image=assets/unsplash-_g1WdcKcV3w.jpg}
 
 ## Slides
 
