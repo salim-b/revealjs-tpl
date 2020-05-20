@@ -116,11 +116,9 @@ You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_d
 
 ## Limitations
 
-Fenced divs cannot encompass headers (`# h1`, `## h2` etc.)!
-
-- The classes/attributes defined for a fenced div will simply not apply to any headers in it.
-
-- Therefore you have to style headers separately using [bracketed spans](#bracketed-spans).
+- Fenced divs cannot encompass headers (`# h1`, `## h2` etc.)!
+  - The classes/attributes defined for a fenced div will simply not apply to any headers in it.
+  - Therefore you have to style headers separately using [bracketed spans](#bracketed-spans).
 
 ---
 
