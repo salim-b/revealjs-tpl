@@ -11,12 +11,12 @@ title-slide-attributes: # for further title slide attributes, see https://pandoc
 
 # Pandoc options for reveal.js
 revealjs-url: assets/reveal.js-3.9.2
-theme: black # for possible values see https://github.com/hakimel/reveal.js#theming
+theme: black # for possible values see https://revealjs.com/themes/
 #background-image: assets/unsplash-lERuUa_96uo.jpg # uncomment for the same background image on every slide
 
-# reveal.js config; for more options like `parallaxBackgroundImage`, see https://github.com/hakimel/reveal.js#configuration
+# reveal.js config; for more options like `parallaxBackgroundImage`, see https://revealjs.com/config/
 mouseWheel: false # set to `true` to scroll through the slides using the mouse wheel / touchpad
-width: 1920 # native presentation size, cf. https://github.com/hakimel/reveal.js#presentation-size
+width: 1920 # native presentation size, cf. https://revealjs.com/presentation-size/
 height: 1080
 ---
 
