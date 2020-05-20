@@ -2,6 +2,18 @@
 
 This is a ready-to-go file compilation to create a [reveal.js](https://revealjs.com/) presentation using [Pandoc](https://pandoc.org/).
 
+
+## Features
+
+Besides [reveal.js' default capabilities](https://github.com/hakimel/reveal.js/#table-of-contents), this template also includes support for the following [reveal.js plug-ins](https://github.com/hakimel/reveal.js/#plugins):
+
+plug-in | last updated
+------- | ------------
+[Elapsed-Time-Bar](https://github.com/tkrkt/reveal.js-elapsed-time-bar) | 2020-02-24
+[Spotlight](https://github.com/denniskniep/reveal.js-plugin-spotlight) | 2020-02-24
+[verticator](https://github.com/Martinomagnifico/reveal.js-verticator) | 2020-02-24
+
+
 ## Instructions
 
 1. Ensure you have the latest version of [Pandoc installed](https://pandoc.org/installing.html) on your system.

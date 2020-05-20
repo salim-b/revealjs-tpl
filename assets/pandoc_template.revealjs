@@ -266,6 +266,13 @@ $endif$
 $if(mathjax)$
           { src: '$revealjs-url$/plugin/math/math.js', async: true },
 $endif$
+
+$-- BEGIN custom section
+          { src: 'assets/reveal.js-plugins/elapsed-time-bar/elapsed-time-bar.js', async: true },
+          { src: 'assets/reveal.js-plugins/spotlight/spotlight.js', async: true },
+          { src: 'assets/reveal.js-plugins/verticator/verticator.js', async: false },
+$-- END custom section
+
           { src: '$revealjs-url$/plugin/notes/notes.js', async: true }
         ]
       });

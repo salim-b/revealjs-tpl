@@ -18,6 +18,16 @@ theme: black # for possible values see https://github.com/hakimel/reveal.js#them
 mouseWheel: false # set to `true` to scroll through the slides using the mouse wheel / touchpad
 width: 1920 # native presentation size, cf. https://github.com/hakimel/reveal.js#presentation-size
 height: 1080
+
+# reveal.js plug-in config
+enable_elapsedtimebar: false
+enable_spotlight: false
+enable_verticator: false
+
+verticator:
+    darktheme: false
+    color: ''
+    oppositecolor: ''
 ---
 
 ::: notes
