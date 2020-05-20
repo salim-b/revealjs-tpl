@@ -136,7 +136,7 @@ Fenced divs cannot encompass headers (`# h1`, `## h2` etc.)!
 
 - You can use shortcodes to add emojis.
 
-- writing `:alien:` will result in :alien: 
+- writing `:alien:` will result in :alien:
 
 - Unfortunately not all of the [GitHub shortcodes](https://github.com/ikatyang/emoji-cheat-sheet#readme) seem to be supported.
 

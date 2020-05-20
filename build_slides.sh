@@ -4,5 +4,6 @@ pandoc "slides.md" \
        --to=revealjs \
        --incremental \
        --standalone \
+       --template=assets/pandoc_template \
        --output=index.html \
 
