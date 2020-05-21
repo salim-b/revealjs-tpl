@@ -71,12 +71,12 @@ You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_d
 ```md
 ::: {.inverted style="text-shadow: 1px 1px 2px red;"}
 
-::: nonincremental
+:::::: nonincremental
 
 - A non-incremental inverted list...
 - ...
 
-:::
+::::::
 
 ... followed by an inverted paragraph...
 
