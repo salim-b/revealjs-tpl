@@ -77,6 +77,13 @@ $if(mathjax)$
   <script src="$revealjs-url$/plugin/math/math.js"></script>
 $endif$
 
+$-- BEGIN custom section
+// third-party plugins
+$if(elapsedtimebar.enable)$
+<script defer src="assets/reveal.js-plugins/elapsed-time-bar/elapsed-time-bar.js"></script>
+$endif$
+$-- END custom section
+
   <script>
 
       // Full list of configuration options available at:
@@ -337,6 +344,15 @@ $if(mathjax)$
           },
         },
 $endif$
+
+$-- BEGIN custom section
+$if(elapsedtimebar.enable)$
+        allottedTime: $elapsedtimebar.allottedTime$,
+        progressBarHeight: $elapsedtimebar.progressBarHeight$,
+        barColor: '$elapsedtimebar.barColor$',
+        pausedBarColor: '$elapsedtimebar.pausedBarColor$',
+$endif$
+$-- END custom section
 
         // reveal.js plugins
         plugins: [
