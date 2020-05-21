@@ -19,15 +19,26 @@ mouseWheel: false # set to `true` to scroll through the slides using the mouse w
 width: 1920 # native presentation size, cf. https://revealjs.com/presentation-size/
 height: 1080
 
-# reveal.js plug-in config
-enable_elapsedtimebar: false
-enable_spotlight: false
-enable_verticator: false
-
+# additional reveal.js plug-in config
+## progress bar of elapsed time
+## see https://github.com/tkrkt/reveal.js-elapsed-time-bar#configurations
+elapsedtimebar:
+    enable: true
+    allottedTime: 15 * 60 * 1000 # equals 15 min; unit is milliseconds
+    progressBarHeight: 3 # unit is pixels
+    barColor: 'rgb(200,0,0)'
+    pausedBarColor: 'rgba(200,0,0,.6)'
+## highlight the current mouse position with a spotlight
+## see https://github.com/denniskniep/reveal.js-plugin-spotlight#configuration
+spotlight:
+    enable: false # NOT YET FINISHED
+## indicators to show the amount of slides in a vertical stack
+## see https://github.com/Martinomagnifico/reveal.js-verticator#configuration
 verticator:
-    darktheme: false
-    color: ''
-    oppositecolor: ''
+    enable: false
+    darktheme: false # NOT YET SUPPORTED
+    color: '' # NOT YET SUPPORTED
+    oppositecolor: '' # NOT YET SUPPORTED
 ---
 
 ::: notes

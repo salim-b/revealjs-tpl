@@ -26,6 +26,13 @@ $if(theme)$
 $else$
   <link rel="stylesheet" href="$revealjs-url$/dist/theme/black.css" id="theme">
 $endif$
+
+$-- BEGIN custom section
+$if(verticator.enable)$
+  <link rel="stylesheet" href="assets/reveal.js-plugins/verticator/verticator.css">
+$endif$
+$-- END custom section
+
 $for(css)$
   <link rel="stylesheet" href="$css$"/>
 $endfor$
@@ -79,10 +86,16 @@ $endif$
 
 $-- BEGIN custom section
 // third-party plugins
+$if(elapsedtimebar.enable)$
 <script defer src="assets/reveal.js-plugins/elapsed-time-bar/elapsed-time-bar.js"></script>
+$endif$
+$if(spotlight.enable)$
 <script defer src="assets/reveal.js-plugins/spotlight/spotlight.js"></script>
+$endif$
+$if(verticator.enable)$
 // TODO: maybe `defer` mustn't be used with this plugin?
 <script defer src="assets/reveal.js-plugins/verticator/verticator.js"></script>
+$endif$
 $-- END custom section
 
   <script>
@@ -346,8 +359,26 @@ $if(mathjax)$
         },
 $endif$
 
+$-- BEGIN custom section
+$if(elapsedtimebar.enable)$
+        allottedTime: $elapsedtimebar.allottedTime$,
+        progressBarHeight: $elapsedtimebar.progressBarHeight$,
+        barColor: '$elapsedtimebar.barColor$',
+        pausedBarColor: '$elapsedtimebar.pausedBarColor$',
+$endif$
+$-- END custom section
         // reveal.js plugins
         plugins: [
+
+$-- BEGIN custom section
+$if(spotlight.enable)$
+          RevealSpotlight,
+$endif$
+$if(verticator.enable)$
+          Verticator,
+$endif$
+$-- END custom section
+
 $if(mathjax)$
           RevealMath,
 $endif$
