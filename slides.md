@@ -10,8 +10,8 @@ title-slide-attributes: # for further title slide attributes, see https://pandoc
     data-background-size: cover # can alternatively be `contain` for letterboxing
 
 # Pandoc options for reveal.js
-revealjs-url: assets/reveal.js-3.9.2
-theme: black # for possible values see https://revealjs.com/themes/
+revealjs-url: assets/reveal.js-4.0.0
+theme: black # for possible values see https://github.com/hakimel/reveal.js#theming
 #background-image: assets/unsplash-lERuUa_96uo.jpg # uncomment for the same background image on every slide
 
 # reveal.js config; for more options like `parallaxBackgroundImage`, see https://revealjs.com/config/
@@ -81,12 +81,12 @@ You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_d
 ```md
 ::: {.inverted style="text-shadow: 1px 1px 2px red;"}
 
-::: nonincremental
+:::::: nonincremental
 
 - A non-incremental inverted list...
 - ...
 
-:::
+::::::
 
 ... followed by an inverted paragraph...
 
