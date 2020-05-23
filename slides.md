@@ -18,6 +18,16 @@ theme: black # for possible values see https://github.com/hakimel/reveal.js#them
 mouseWheel: false # set to `true` to scroll through the slides using the mouse wheel / touchpad
 width: 1920 # native presentation size, cf. https://revealjs.com/presentation-size/
 height: 1080
+
+# additional reveal.js plug-in config
+## progress bar of elapsed time
+## see https://github.com/tkrkt/reveal.js-elapsed-time-bar#configurations
+elapsedtimebar:
+    enable: true
+    allottedTime: 15 * 60 * 1000 # equals 15 min; unit is milliseconds
+    progressBarHeight: 3 # unit is pixels
+    barColor: 'rgb(200,0,0)'
+    pausedBarColor: 'rgba(200,0,0,.6)'
 ---
 
 ::: notes
