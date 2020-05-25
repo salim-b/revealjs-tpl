@@ -35,10 +35,10 @@ spotlight:
 ## indicators to show the amount of slides in a vertical stack
 ## see https://github.com/Martinomagnifico/reveal.js-verticator#configuration
 verticator:
-    enable: false
-    darktheme: false # NOT YET SUPPORTED
-    color: '' # NOT YET SUPPORTED
-    oppositecolor: '' # NOT YET SUPPORTED
+    enable: true
+    darktheme: true # set to `false` if you use a light theme
+    color: ''
+    oppositecolor: ''
 ---
 
 ::: notes

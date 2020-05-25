@@ -48,6 +48,13 @@ $for(include-before)$
 $include-before$
 $endfor$
   <div class="reveal">
+
+$-- BEGIN custom section
+$if(verticator.enable)$
+    <ul class="verticator"></ul>
+$endif$
+$-- END custom section
+
     <div class="slides">
 
 $if(title)$
@@ -87,14 +94,13 @@ $endif$
 $-- BEGIN custom section
 // third-party plugins
 $if(elapsedtimebar.enable)$
-<script defer src="assets/reveal.js-plugins/elapsed-time-bar/elapsed-time-bar.js"></script>
+  <script defer src="assets/reveal.js-plugins/elapsed-time-bar/elapsed-time-bar.js"></script>
 $endif$
 $if(spotlight.enable)$
-<script defer src="assets/reveal.js-plugins/spotlight/spotlight.js"></script>
+  <script defer src="assets/reveal.js-plugins/spotlight/spotlight.js"></script>
 $endif$
 $if(verticator.enable)$
-// TODO: maybe `defer` mustn't be used with this plugin?
-<script defer src="assets/reveal.js-plugins/verticator/verticator.js"></script>
+  <script src="assets/reveal.js-plugins/verticator/verticator.js"></script>
 $endif$
 $-- END custom section
 
@@ -297,7 +303,7 @@ $if(parallaxBackgroundImage)$
 $else$
 $if(background-image)$
        // Parallax background image
-       parallaxBackgroundImage: '$background-image$', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        parallaxBackgroundImage: '$background-image$', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 $endif$
 $endif$
 $if(parallaxBackgroundSize)$
@@ -366,7 +372,19 @@ $if(elapsedtimebar.enable)$
         barColor: '$elapsedtimebar.barColor$',
         pausedBarColor: '$elapsedtimebar.pausedBarColor$',
 $endif$
+$if(verticator.enable)$
+	      verticator: {
+$if(verticator.darktheme)$
+		      darktheme: $verticator.darktheme$,
+$else$
+		      darktheme: false,
+$endif$
+		      color: '$verticator.color$',
+		      oppositecolor: '$verticator.oppositecolor$'
+	      },
+$endif$
 $-- END custom section
+
         // reveal.js plugins
         plugins: [
 
