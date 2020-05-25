@@ -373,15 +373,15 @@ $if(elapsedtimebar.enable)$
         pausedBarColor: '$elapsedtimebar.pausedBarColor$',
 $endif$
 $if(verticator.enable)$
-	      verticator: {
+        verticator: {
 $if(verticator.darktheme)$
-		      darktheme: $verticator.darktheme$,
+          darktheme: $verticator.darktheme$,
 $else$
-		      darktheme: false,
+          darktheme: false,
 $endif$
-		      color: '$verticator.color$',
-		      oppositecolor: '$verticator.oppositecolor$'
-	      },
+          color: '$verticator.color$',
+          oppositecolor: '$verticator.oppositecolor$'
+        },
 $endif$
 $-- END custom section
 
