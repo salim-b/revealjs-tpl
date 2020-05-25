@@ -10,7 +10,7 @@ title-slide-attributes: # for further title slide attributes, see https://pandoc
     data-background-size: cover # can alternatively be set to `contain` for letterboxing
 
 # Pandoc options for reveal.js
-revealjs-url: assets/reveal.js-4.0.0
+revealjs-url: assets/reveal.js-4.0.1
 theme: black # for possible values see https://github.com/hakimel/reveal.js#theming
 #background-image: assets/unsplash-lERuUa_96uo.jpg # uncomment for the same background image on every slide
 
