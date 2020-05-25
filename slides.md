@@ -59,7 +59,7 @@ notes before the first slide...
 
     where `COLOR` must be a [CSS-compatible color specification](https://en.wikipedia.org/wiki/Web_colors#CSS_colors).
 
-- It's strongly recommended to use only [hexadecimal color specifications](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet) because oherwise reveal.js' auto-inversion of the text color [won't work](https://github.com/Martinomagnifico/reveal.js-verticator#configuration) and you'd have to manually adapt it to the chosen background color.
+- It's strongly recommended to use only [hexadecimal color specifications](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet) (e.g. `"#fff"` for white) because oherwise reveal.js' auto-inversion of the text color [won't work](https://github.com/Martinomagnifico/reveal.js-verticator#configuration) and you'd have to manually adapt it to the chosen background color.
 
 - Try e.g. W3Schools' [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) to find and convert specific color values.
 
