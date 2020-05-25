@@ -49,59 +49,57 @@ notes before the first slide...
 
 # 1st main slide {data-transition="convex"}
 
-## [Bracketed Spans]{.inverted} {data-background-color=white}
+## Set background color of individual slides {data-background-color="#fff"}
 
-::: inverted
+- You can set the background color of an individual slide by appending
+
+    ```css
+    {data-background-color="COLOR"}
+    ```
+
+    where `COLOR` must be a [CSS-compatible color specification](https://en.wikipedia.org/wiki/Web_colors#CSS_colors).
+
+- It's strongly recommended to use only [hexadecimal color specifications](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet) because oherwise reveal.js' auto-inversion of the text color [won't work](https://github.com/Martinomagnifico/reveal.js-verticator#configuration) and you'd have to manually adapt it to the chosen background color.
+
+- Try e.g. W3Schools' [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) to find and convert specific color values.
+
+## Bracketed Spans
 
 You can use [bracketed spans](https://pandoc.org/MANUAL.html#extension-bracketed_spans) to assign classes and attributes to text.
 
-:::
-
-## {data-background-color=white}
-
-::: inverted
+---
 
 ```md
-[Text wrapped in a `<span>` with class `inverted`]{.inverted}
+[Text wrapped in a `<span>` with class `glowing`]{.glowing}
 ```
-
-:::
-
-## {data-background-color=white}
-
-[will result in:]{.inverted}
-
-## {data-background-color=white}
-
-[Text wrapped in a `<span>` with class `inverted`]{.inverted}
 
 ---
 
-## [Fenced Divs]{.inverted} {data-background-color=white}
+will result in:
 
-::: inverted
+---
+
+[Text wrapped in a `<span>` with class `glowing`]{.glowing}
+
+## Fenced Divs
 
 You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_divs) to assign classes and attributes to whole blocks of content.
 
-:::
-
-## {data-background-color=white}
-
-::: inverted
+---
 
 ```md
-::: {.inverted style="text-shadow: 1px 1px 2px red;"}
+::: {style="text-shadow: 1px 1px 5px red;"}
 
 :::::: nonincremental
 
-- A non-incremental inverted list...
+- A non-incremental list...
 - ...
 
 ::::::
 
-... followed by an inverted paragraph...
+... followed by a paragraph...
 
-| ...And some | Table | inverted |
+| ...And | some | table |
 | ---- | ----- | -------- |
 | all | with | ugly |
 | red | shadow | ✓ |
@@ -109,26 +107,24 @@ You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_d
 :::
 ```
 
-:::
+---
 
-## {data-background-color=white}
+will result in:
 
-[will result in:]{.inverted}
+---
 
-## {data-background-color=white}
-
-::: {.inverted style="text-shadow: 1px 1px 2px red;"}
+::: {style="text-shadow: 1px 1px 5px red;"}
 
 :::::: nonincremental
 
-- A non-incremental inverted list...
+- A non-incremental list...
 - ...
 
 ::::::
 
-... followed by an inverted paragraph...
+... followed by a paragraph...
 
-| ...And some | Table | inverted |
+| ...And | some | table |
 | ---- | ----- | -------- |
 | all | with | ugly |
 | red | shadow | ✓ |
@@ -137,11 +133,10 @@ You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_d
 
 ## Limitations
 
-- Fenced divs cannot encompass headers (`# h1`, `## h2` etc.)!
-  - The classes/attributes defined for a fenced div will simply not apply to any headers in it.
+- Fenced divs must not encompass headers (`# h1`, `## h2` etc.)!
+  - The classes/attributes defined for a fenced div will not apply to any headers in it.
+  - And Enclosing headers by fenced divs breaks page layout.
   - Therefore you have to style headers separately using [bracketed spans](#bracketed-spans).
-
----
 
 # 2nd main slide
 
@@ -162,8 +157,6 @@ You can also use [fenced divs](https://pandoc.org/MANUAL.html#extension-fenced_d
 ## 3 {data-transition="convex"}
 
 Babam!
-
----
 
 # 3rd main slide
 
