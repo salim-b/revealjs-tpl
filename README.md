@@ -10,7 +10,7 @@ Besides reveal.js' [default capabilities](https://revealjs.com/) and [plug-ins](
 plug-in | last updated
 ------- | ------------
 [Elapsed-Time-Bar](https://github.com/tkrkt/reveal.js-elapsed-time-bar) | 2020-05-25
-[Spotlight](https://github.com/denniskniep/reveal.js-plugin-spotlight) | 2020-02-24
+[Spotlight](https://github.com/denniskniep/reveal.js-plugin-spotlight) | 2020-05-25
 [Verticator](https://github.com/Martinomagnifico/reveal.js-verticator) | 2020-05-25
 
 
