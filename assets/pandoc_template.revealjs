@@ -92,12 +92,12 @@ $if(mathjax)$
 $endif$
 
 $-- BEGIN custom section
-// third-party plugins
+  // third-party plugins
 $if(elapsedtimebar.enable)$
   <script defer src="assets/reveal.js-plugins/elapsed-time-bar/elapsed-time-bar.js"></script>
 $endif$
 $if(spotlight.enable)$
-  <script defer src="assets/reveal.js-plugins/spotlight/spotlight.js"></script>
+  <script src="assets/reveal.js-plugins/spotlight/spotlight.js"></script>
 $endif$
 $if(verticator.enable)$
   <script src="assets/reveal.js-plugins/verticator/verticator.js"></script>
@@ -371,6 +371,52 @@ $if(elapsedtimebar.enable)$
         progressBarHeight: $elapsedtimebar.progressBarHeight$,
         barColor: '$elapsedtimebar.barColor$',
         pausedBarColor: '$elapsedtimebar.pausedBarColor$',
+$endif$
+$if(spotlight.enable)$
+$if(spotlight.togglePresentationModeKeyCode)$
+        keyboard: {
+          $spotlight.togglePresentationModeKeyCode$: function() { 
+            RevealSpotlight.togglePresentationMode();
+          },
+        },
+$endif$
+        spotlight: {
+          size: $spotlight.size$,
+$if(spotlight.lockPointerInsideCanvas)$
+          lockPointerInsideCanvas: $spotlight.lockPointerInsideCanvas$,
+$else$
+          lockPointerInsideCanvas: false,
+$endif$
+$if(spotlight.toggleSpotlightOnMouseDown)$
+          toggleSpotlightOnMouseDown: $spotlight.toggleSpotlightOnMouseDown$,
+$else$
+          toggleSpotlightOnMouseDown: false,
+$endif$
+$if(spotlight.spotlightOnKeyPressAndHold)$
+          spotlightOnKeyPressAndHold: $spotlight.spotlightOnKeyPressAndHold$,
+$else$
+          spotlightOnKeyPressAndHold: false,
+$endif$
+          spotlightCursor: '$spotlight.spotlightCursor$',
+          presentingCursor: '$spotlight.presentingCursor$',
+$if(spotlight.initialPresentationMode)$
+          initialPresentationMode: $spotlight.initialPresentationMode$,
+$else$
+          initialPresentationMode: false,
+$endif$
+$if(spotlight.disablingUserSelect)$
+          disablingUserSelect: $spotlight.disablingUserSelect$,
+$else$
+          disablingUserSelect: false,
+$endif$
+          fadeInAndOut: $spotlight.fadeInAndOut$,
+$if(spotlight.useAsPointer)$
+          useAsPointer: $spotlight.useAsPointer$,
+$else$
+          useAsPointer: false,
+$endif$
+          pointerColor: 'red'
+        },
 $endif$
 $if(verticator.enable)$
         verticator: {

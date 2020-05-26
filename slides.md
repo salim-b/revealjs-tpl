@@ -31,7 +31,19 @@ elapsedtimebar:
 ## highlight the current mouse position with a spotlight
 ## see https://github.com/denniskniep/reveal.js-plugin-spotlight#configuration
 spotlight:
-    enable: false # NOT YET FINISHED
+    enable: true
+    size: 60 # size of the spotlight
+    lockPointerInsideCanvas: false # lock the mouse pointer inside the presentation
+    togglePresentationModeKeyCode: 77 # [keyCode](https://developer.mozilla.org/docs/Web/API/KeyboardEvent/keyCode) to toggle presentation mode; visit <https://keycode.info/> to easily determine keyCodes (77 = m); disabled when set to `false`
+    toggleSpotlightOnMouseDown: true # toggle spotlight by holding down the mouse key
+    spotlightOnKeyPressAndHold: false # [keyCode](https://developer.mozilla.org/docs/Web/API/KeyboardEvent/keyCode) to toggle spotlight; visit <https://keycode.info/> to easily determine keyCodes; disabled when set to `false`
+    spotlightCursor: 'none' # the cursor when spotlight is on; e.g. 'crosshair'
+    presentingCursor: 'none' # the cursor when spotlight is off and in presentation mode; e.g. 'default'
+    initialPresentationMode: true # start the presentation in presentation mode
+    disablingUserSelect: true # disable text selection in presentation mode
+    fadeInAndOut: 100 # transition duration; unit is milliseconds; disabled when set to `false`
+    useAsPointer: false # use a pointer instead of a spotlight
+    pointerColor: 'red' # only relevant if `useAsPointer: true`
 ## indicators to show the amount of slides in a vertical stack
 ## see https://github.com/Martinomagnifico/reveal.js-verticator#configuration
 verticator:
