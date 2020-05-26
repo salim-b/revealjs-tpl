@@ -49,8 +49,8 @@ spotlight:
 verticator:
     enable: true
     darktheme: true # set to `false` if you use a light theme
-    color: ''
-    oppositecolor: ''
+    color: '' # manually set the normal verticator color
+    oppositecolor: '' # manually set the inverted verticator color
 ---
 
 ::: notes
