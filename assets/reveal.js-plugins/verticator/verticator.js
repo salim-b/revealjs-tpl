@@ -4,7 +4,7 @@
  * https://github.com/Martinomagnifico
  *
  * Verticator.js for Reveal.js 
- * Version 1.0.2
+ * Version 1.0.4
  * 
  * @license 
  * MIT licensed
@@ -71,6 +71,15 @@
 	    }(Element.prototype);
 	  }
 
+	  var getNodeindex = function getNodeindex(elm) {
+	    var c = elm.parentNode.children,
+	        i = 0;
+
+	    for (; i < c.length; i++) {
+	      if (c[i] == elm) return i;
+	    }
+	  };
+
 	  var verticate = function verticate(deck, options) {
 	    var revealElement = deck.getRevealElement();
 	    var theVerticator = revealElement.querySelector('.verticator');
@@ -82,26 +91,39 @@
 	      return selectionarray;
 	    };
 
-	    var activateBullet = function activateBullet(event) {
-	      var listItems = selectionArray(theVerticator, 'li');
-	      listItems.filter(function (listItem, i) {
-	        if (i == event.indexv) {
-	          listItem.classList.add(activeclass);
-	        } else {
-	          listItem.classList.remove(activeclass);
-	        }
-	      });
+	    var clickBullet = function clickBullet(event) {
+	      if (event.target.matches('.verticator li a')) {
+	        var currIndexh = deck.getIndices().h;
+	        var currIndexf = deck.getIndices().v;
+	        var i = getNodeindex(event.target.parentNode);
+	        event.preventDefault();
+	        deck.slide(currIndexh, i, currIndexf);
+	      }
 	    };
 
-	    var createBullets = function createBullets(event, sectionCount) {
+	    var activateBullet = function activateBullet(event) {
+	      var listItems = selectionArray(theVerticator, 'li');
+	      var bestMatch = -1;
+	      listItems.forEach(function (listItem, i) {
+	        if (parseInt(listItem.getAttribute("data-index")) <= event.indexv) {
+	          bestMatch = i;
+	        }
+
+	        listItem.classList.remove(activeclass);
+	      });
+
+	      if (bestMatch >= 0) {
+	        listItems[bestMatch].classList.add(activeclass);
+	      }
+	    };
+
+	    var createBullets = function createBullets(event, sections) {
 	      theVerticator.classList.remove('visible');
 	      var listHtml = '';
-
-	      for (var i = 0; i < sectionCount; i++) {
-	        var link = event.indexh + "/" + i;
-	        listHtml += '<li><a href="#/' + link + '"></li>';
-	      }
-
+	      sections.forEach(function (i) {
+	        var link = ' href="#/' + event.indexh + "/" + i + '"';
+	        listHtml += '<li data-index="' + i + '"><a ' + (options.clickable ? link : '') + '></li>';
+	      });
 	      setTimeout(function () {
 	        theVerticator.innerHTML = listHtml;
 	        activateBullet(event);
@@ -146,21 +168,25 @@
 	    var slideAppear = function slideAppear(event) {
 	      var slide = event.currentSlide;
 	      var parent = slide.parentNode;
-	      var sectionCount = Array.from(parent.children).filter(function (elem) {
-	        return elem.tagName == 'SECTION';
-	      }).length;
+	      var sections = Array.from(parent.children).map(function (elem, index) {
+	        return [index, elem];
+	      }).filter(function (indexedElem) {
+	        return indexedElem[1].tagName == 'SECTION' && (!options.skipuncounted || indexedElem[1].getAttribute('data-visibility') !== 'uncounted');
+	      }).map(function (indexedElem) {
+	        return indexedElem[0];
+	      });
 
 	      if (!parent.classList.contains('stack')) {
 	        theVerticator.classList.remove('visible');
-	      } else if (sectionCount > 1) {
+	      } else if (sections.length > 1) {
 	        if (event.previousSlide) {
 	          var lastParent = event.previousSlide.parentNode;
 
 	          if (parent != lastParent) {
-	            createBullets(event, sectionCount);
+	            createBullets(event, sections);
 	          }
 	        } else {
-	          createBullets(event, sectionCount);
+	          createBullets(event, sections);
 	        }
 
 	        setTimeout(function () {
@@ -177,6 +203,12 @@
 	      deck.on('ready', function (event) {
 	        slideAppear(event);
 	      });
+
+	      if (deck.getConfig().embedded) {
+	        deck.on('click', function (event) {
+	          clickBullet(event);
+	        });
+	      }
 	    }
 	  };
 
@@ -184,7 +216,9 @@
 	    var defaultOptions = {
 	      darktheme: false,
 	      color: '',
-	      oppositecolor: ''
+	      oppositecolor: '',
+	      skipuncounted: false,
+	      clickable: true
 	    };
 
 	    var defaults = function defaults(options, defaultOptions) {

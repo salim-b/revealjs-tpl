@@ -425,6 +425,16 @@ $if(verticator.darktheme)$
 $else$
           darktheme: false,
 $endif$
+$if(verticator.skipuncounted)$
+          skipuncounted: $verticator.skipuncounted$,
+$else$
+          skipuncounted: false,
+$endif$
+$if(verticator.clickable)$
+          clickable: $verticator.clickable$,
+$else$
+          clickable: false,
+$endif$
           color: '$verticator.color$',
           oppositecolor: '$verticator.oppositecolor$'
         },

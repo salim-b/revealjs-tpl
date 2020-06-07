@@ -51,6 +51,8 @@ verticator:
     darktheme: true # set to `false` if you use a light theme
     color: '' # manually set the normal verticator color
     oppositecolor: '' # manually set the inverted verticator color
+    skipuncounted: true # Omit drawing Verticator bullets for slides that have `data-visibility="uncounted"` set?
+    clickable: true # Allow navigation to a slide by clicking on the corresponding Verticator bullet?
 ---
 
 ::: notes
@@ -152,17 +154,19 @@ will result in:
 
 # 2nd main slide
 
-## 1 {data-transition="convex"}
+## 1 {data-transition="convex" data-visibility="uncounted"}
 
-- bla
-- bli
-- blup
+- This slide has no corresponding Verticator bullet on the right ...
+
+- ... because the attribute `data-visibility="uncounted"` was set.
+
+- This means the currently highlighted bullet corresponds to the previous slide.
 
 ## 2 {data-transition="convex"}
 
-- You can use shortcodes to add emojis.
+- You can use shortcodes to add emojis:
 
-- writing `:alien:` will result in :alien:
+- Writing `:alien:` will result in :alien:.
 
 - Unfortunately not all of the [GitHub shortcodes](https://github.com/ikatyang/emoji-cheat-sheet#readme) seem to be supported.
 
