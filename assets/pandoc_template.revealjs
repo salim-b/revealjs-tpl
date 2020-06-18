@@ -29,7 +29,7 @@ $endif$
 
 $-- BEGIN custom section
 $if(verticator.enable)$
-  <link rel="stylesheet" href="assets/reveal.js-plugins/verticator/verticator.css">
+  <link rel="stylesheet" href="node_modules/reveal.js-verticator/plugin/verticator/verticator.css">
 $endif$
 $-- END custom section
 
@@ -100,7 +100,7 @@ $if(spotlight.enable)$
   <script src="assets/reveal.js-plugins/spotlight/spotlight.js"></script>
 $endif$
 $if(verticator.enable)$
-  <script src="assets/reveal.js-plugins/verticator/verticator.js"></script>
+  <script src="node_modules/reveal.js-verticator/plugin/verticator/verticator.js"></script>
 $endif$
 $-- END custom section
 
