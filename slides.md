@@ -5,9 +5,6 @@ css: assets/custom.css # put your custom styles in this file
 
 # title slide options
 title: SLIDESHOW
-title-slide-attributes: # for further title slide attributes, see https://pandoc.org/MANUAL.html#background-in-reveal.js-and-beamer
-    data-background-image: assets/unsplash-lERuUa_96uo.jpg
-    data-background-size: cover # can alternatively be set to `contain` for letterboxing
 
 # Pandoc options for (reveal.js) slides
 revealjs-url: node_modules/reveal.js
@@ -15,8 +12,9 @@ theme: black # for possible values see https://revealjs.com/themes/
 #background-image: assets/unsplash-lERuUa_96uo.jpg # uncomment for the same background image on every slide
 
 # reveal.js config; for more options like `parallaxBackgroundImage`, see https://revealjs.com/config/
-mouseWheel: false # set to `true` to scroll through the slides using the mouse wheel / touchpad
-width: 1920 # native presentation size, cf. https://revealjs.com/presentation-size/
+mouseWheel: 'false' # set to `true` to scroll through the slides using the mouse wheel / touchpad; has to be set as String until https://github.com/jgm/pandoc/issues/7402 is resolved
+## native presentation size, cf. https://revealjs.com/presentation-size/
+width: 1920
 height: 1080
 
 # additional reveal.js plug-in config
