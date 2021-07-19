@@ -12,7 +12,7 @@ theme: black # for possible values see https://revealjs.com/themes/
 #background-image: assets/unsplash-lERuUa_96uo.jpg # uncomment for the same background image on every slide
 
 # reveal.js config; for more options like `parallaxBackgroundImage`, see https://revealjs.com/config/
-mouseWheel: 'false' # set to `true` to scroll through the slides using the mouse wheel / touchpad; has to be set as String until https://github.com/jgm/pandoc/issues/7402 is resolved
+mouseWheel: false
 ## native presentation size, cf. https://revealjs.com/presentation-size/
 width: 1920
 height: 1080
