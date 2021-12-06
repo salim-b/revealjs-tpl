@@ -3,7 +3,7 @@
 This is a ready-to-go file compilation to create a [reveal.js](https://revealjs.com/) presentation using [Pandoc](https://pandoc.org/)[^pandoc-version].
 
 
-[^pandoc-version]: The included [Pandoc template](assets/pandoc_template.revealjs) is kept in sync with [upstream changes](https://github.com/jgm/pandoc-templates/commits/master/default.revealjs) and is recommended to be used together with [Pandoc 2.15](https://github.com/jgm/pandoc/releases/tag/2.15).
+[^pandoc-version]: The included [Pandoc template](assets/pandoc_template.revealjs) is kept in sync with [upstream changes](https://github.com/jgm/pandoc-templates/commits/master/default.revealjs) and is recommended to be used together with [Pandoc 2.16.2](https://github.com/jgm/pandoc/releases/tag/2.16.2).
 
 
 ## Features
